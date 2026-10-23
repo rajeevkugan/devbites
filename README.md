@@ -12,3 +12,6 @@ npm run build    # static output in dist/ (host on Netlify, Cloudflare Pages, Gi
 - Confirm the contact address (`site.email`, `rajeev@devbites.com`) and the domain in `astro.config.mjs`.
 - Client logos: drop approved files in `public/clients/<name>.svg` and set `logo` on the entry in `src/data/site.ts`. Until then the strip shows text names.
 - Case-study images are from the 2018 portfolio (`public/work/`). BMO Life mocks show BMO branding; confirm you may show them.
+
+## Deploying to cPanel
+`dist/` is committed on purpose. After changing the site: `npm run build`, commit `dist/`, push, then in cPanel > Git Version Control > Manage > Deploy HEAD Commit (`.cpanel.yml` copies `dist/` to `public_html`).
