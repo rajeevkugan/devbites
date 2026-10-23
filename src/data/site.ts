@@ -4,33 +4,33 @@ export const site = {
   // Contact address (plain mailto link).
   email: 'rajeev@devbites.com',
   years: '15+', // per Rajeev; the freelance practice began Dec 2005
-  tagline: 'Product, design & delivery for teams that ship.',
+  tagline: 'AI-driven product design & delivery for teams that ship.',
 };
 
 export const services = [
   {
     title: 'Project management',
     blurb:
-      'Technical project management from kickoff to launch: scope, agile cadence, QA/UAT, vendor and stakeholder coordination.',
-    points: ['Delivery planning', 'Agile & scrum', 'QA + UAT', 'Stakeholder reporting'],
+      'AI-assisted planning and delivery from kickoff to launch: scoping, agile cadence, QA/UAT and stakeholder reporting, with less overhead and clearer visibility.',
+    points: ['AI-assisted planning', 'Agile & scrum', 'QA + UAT', 'Stakeholder reporting'],
   },
   {
     title: 'UI / UX design',
     blurb:
-      'Research, wireframes, interactive prototypes and polished UI, built on accessible, WCAG-minded design systems.',
-    points: ['Wireframes & flows', 'Prototyping', 'Design systems', 'Accessibility'],
+      'AI-accelerated research, wireframes and prototypes, then polished, accessible UI on design systems that scale.',
+    points: ['AI-powered research', 'Rapid prototyping', 'Design systems', 'Accessibility'],
   },
   {
     title: 'Front-end development',
     blurb:
-      'Responsive, performant web and mobile front ends. I recommend the right stack for the product, then build it.',
-    points: ['HTML / CSS / JS', 'React, Angular, Ionic', 'Responsive & mobile web', 'Email & marketing sites'],
+      'Responsive, performant web and mobile products built with AI-assisted engineering: the right stack, shipped in weeks instead of quarters.',
+    points: ['AI-assisted engineering', 'React, Astro, Ionic', 'Web & mobile apps', 'Automation & integrations'],
   },
   {
     title: 'Marketing & brand',
     blurb:
-      'Brand kits, campaign sites, print and video that make a product easy to understand and easy to say yes to.',
-    points: ['Brand guidelines', 'Campaign sites', 'Video & motion', 'Print & social'],
+      'AI-generated content, brand systems, campaign sites and video that make a product easy to understand and easy to say yes to.',
+    points: ['Brand systems', 'Campaign sites', 'AI content & video', 'Social'],
   },
 ];
 
@@ -109,26 +109,10 @@ export const work = [
     hero: 'bmo-portal',
     alt: 'BMO Life policy portal design mocks',
   },
-  {
-    slug: 'sites-brand',
-    tag: 'Web · Brand · Print · Video',
-    title: 'Sites, brands, print & video',
-    summary:
-      'A decade of campaign sites, brand kits and marketing collateral for startups, SMBs and corporate teams.',
-    role: 'Designer, developer & producer',
-    bullets: [
-      'Marketing sites designed in Photoshop/Sketch and built in HTML and CSS3.',
-      'Logo design and brand guidelines for startup, SMB and personal brands.',
-      'Print campaigns and concept-treatment-shoot-edit video for web and social.',
-    ],
-    images: ['sites-process', 'sites-claimcast', 'brands', 'print-tidenotes'],
-    hero: 'sites-process',
-    alt: 'Marketing site design progression from low fidelity to final design',
-  },
 ];
 
 export const process = [
-  { n: '01', title: 'Test', text: 'Start small. Validate the idea with real users or real data before committing.' },
-  { n: '02', title: 'Tune', text: 'Refine what the evidence shows. Cut what does not earn its place.' },
-  { n: '03', title: 'Try again', text: 'Iterate quickly and ship improvements in the open.' },
+  { n: '01', title: 'Test', text: 'Start small. Use AI to prototype in hours, then validate with real users and real data before committing.' },
+  { n: '02', title: 'Tune', text: 'Let the evidence steer. Refine what works and cut what does not earn its place.' },
+  { n: '03', title: 'Try again', text: 'Iterate quickly with AI in the loop and ship improvements in the open.' },
 ];
