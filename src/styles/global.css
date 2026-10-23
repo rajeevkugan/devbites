@@ -237,3 +237,17 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   .xp { margin-top: 48px; }
   #services { padding-top: 56px; }
 }
+
+.hero-art-m { display: none; }
+.hero-art-m .a { animation: float 9s ease-in-out infinite; }
+.hero-art-m .b { animation: float 9s ease-in-out -4.5s infinite; }
+@media (max-width: 860px) {
+  .hero-art { display: none; }
+  .hero-art-m { display: block; float: right; width: 96px; margin: 4px -4px 8px 14px; filter: drop-shadow(0 12px 16px rgb(16 55 66 / .2)); }
+  .hero { padding: 104px 0 44px; }
+  .hero h1 { font-size: clamp(2.2rem, 9.5vw, 2.8rem); }
+  .hero .lede { clear: none; }
+  .stats { margin-top: 28px; }
+  .xp { margin-top: 28px; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-art-m .a, .hero-art-m .b { animation: none; } }
