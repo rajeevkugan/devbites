@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { site, services, clients, work, process } from '../data/site';
+import { site, services, clients, work, process, experience } from '../data/site';
 
 const years = site.years;
 const mail = `mailto:${site.email}?subject=${encodeURIComponent('Project enquiry')}`;
@@ -41,7 +41,7 @@ const mail = `mailto:${site.email}?subject=${encodeURIComponent('Project enquiry
       <div class="wrap">
         <p class="eyebrow">AI-driven consultancy · Toronto</p>
         <h1>Build smarter with <em>AI-driven</em> delivery.</h1>
-        <p class="lede">Devbites Inc. pairs 15+ years of design, development and project-management experience with AI-powered workflows, so larger teams go from idea to shipped product faster.</p>
+        <p class="lede">AI makes it fast. Fifteen years of end-to-end experience makes it right. Devbites Inc. pairs senior design, development and project-management judgment with AI-powered workflows, so larger teams go from idea to shipped product faster.</p>
         <div class="cta">
           <a class="btn" href="#work">See selected work</a>
           <a class="btn ghost" href="#contact">Start a conversation</a>
@@ -56,6 +56,21 @@ const mail = `mailto:${site.email}?subject=${encodeURIComponent('Project enquiry
         <div class="stat"><b>20k+</b><span>customers on a platform I founded and designed</span></div>
       </div>
     </div>
+
+    <section class="section xp" id="experience" style="margin-top:clamp(72px,10vw,140px)">
+      <div class="wrap xp-grid">
+        <div class="reveal">
+          <p class="eyebrow">Why experience matters</p>
+          <h2>AI is the accelerator. Experience is the&nbsp;engine.</h2>
+          <p class="lede" style="margin-top:22px">Anyone can generate a draft. Turning it into a product that ships, scales and survives real stakeholders takes years of seeing it done end to end.</p>
+        </div>
+        <div class="xp-list">
+          {experience.map((x) => (
+            <div class="xp-item reveal"><b>{x.n}</b><div><h3>{x.title}</h3><p>{x.text}</p></div></div>
+          ))}
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="services">
       <div class="wrap">
@@ -136,6 +151,7 @@ const mail = `mailto:${site.email}?subject=${encodeURIComponent('Project enquiry
           <p class="eyebrow">About</p>
           <h2>Rajeev Kugan</h2>
           <p style="margin-top:24px">A creative leader specializing in SaaS-based, end-consumer product delivery, now building with AI at the centre of the workflow. For {years} years I’ve challenged the status quo while keeping stakeholders’ wants and needs at the centre, working across Canada’s largest banks, insurers and brands.</p>
+          <p>That experience is the point: AI speeds up the work, but knowing the full end-to-end scope is what makes it land.</p>
           <p>I’m a creator at heart who adopted design, development, marketing, photography and cinematography as ways to bring a vision to life. Devbites Inc. is the incorporated home for that work: contract and consulting engagements with larger organizations, delivered with AI-driven tooling and decades of hard-won product judgment.</p>
           <div class="facts">
             <span>AI-assisted delivery</span><span>Finance</span><span>Insurance</span><span>Entertainment</span><span>Figma · Sketch</span><span>React · Astro</span>
