@@ -251,3 +251,8 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   .xp { margin-top: 28px; }
 }
 @media (prefers-reduced-motion: reduce) { .hero-art-m .a, .hero-art-m .b { animation: none; } }
+
+@media (min-width: 861px) {
+  .clients ul { flex-wrap: nowrap; gap: clamp(24px, 4.5vw, 72px); }
+  .clients li { font-size: clamp(1.2rem, 0.7rem + 1.5vw, 2rem); white-space: nowrap; }
+}
