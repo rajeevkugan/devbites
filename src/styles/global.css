@@ -177,7 +177,7 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 @media (max-width: 860px) {
   .case, .about { grid-template-columns: 1fr; }
   .case:nth-of-type(even) .shot { order: 0; }
-  .about .badge { position: static; max-width: 220px; }
+  .about .badge { position: static; max-width: 120px; border-radius: 22px; }
   .process .steps { grid-template-columns: 1fr; }
   .nav ul { display: none; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; background: #e7eef1; border-radius: 28px; padding: 20px 26px; gap: 6px; margin: 0; box-shadow: 0 20px 40px -20px rgb(16 55 66 / .4); }
   .nav ul a { font-size: 1.15rem; display: block; padding: 10px 0; }
@@ -197,3 +197,32 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .xp-item h3 { font-size: clamp(1.2rem, 1rem + .8vw, 1.5rem); margin-bottom: 6px; }
 .xp-item p { color: #33434b; }
 @media (max-width: 860px) { .xp-grid { grid-template-columns: 1fr; } }
+
+/* Mobile polish */
+@media (max-width: 860px) {
+  .section { padding-block: 64px; }
+  .hero { padding: 110px 0 170px; }
+  .hero .lede { font-size: 1.02rem; margin-top: 20px; }
+  .hero .cta { margin-top: 28px; }
+  .hero .btn { padding: 14px 22px; font-size: .95rem; }
+  .hero-art { width: 84px; right: 24px; bottom: 84px; opacity: 1; }
+  .eyebrow { font-size: .72rem; letter-spacing: .12em; }
+  .stats { gap: 12px; margin-top: -48px; }
+  .stat { display: flex; align-items: center; gap: 18px; padding: 16px 20px; border-radius: 20px; }
+  .stat b { font-size: 2rem; min-width: 76px; }
+  .stat span { margin: 0; font-size: .88rem; }
+  .xp-item { grid-template-columns: 34px 1fr; gap: 10px; padding: 18px 0; }
+  .xp .lede { font-size: 1.02rem; }
+  .card { min-height: 0; }
+  .card h3 { margin: 36px 0 12px; }
+  .rail { padding-inline: 20px; }
+  .section-head { margin-bottom: 28px; }
+  .case { padding-block: 28px; }
+  .thumbs img { height: 90px; }
+  .clients { padding-block: 44px; }
+  .process, .xp, .cta-block { margin-inline: 8px; }
+  .cta-block { padding-block: 56px; }
+  .cta-block .btn { padding: 14px 20px; font-size: .92rem; max-width: 100%; }
+  footer .wrap { flex-direction: column; }
+}
+@media (max-width: 860px) { .about .badge { max-width: 120px; border-radius: 22px; } .hero { padding-bottom: 150px; } .hero-art { bottom: 64px; } }
