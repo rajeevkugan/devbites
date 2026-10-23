@@ -1,0 +1,182 @@
+---
+import Base from '../layouts/Base.astro';
+import { site, services, clients, work, process } from '../data/site';
+
+const years = site.years;
+const mail = `mailto:${site.email}?subject=${encodeURIComponent('Project enquiry')}`;
+---
+<Base
+  title="Devbites Inc. | Design, development & project management consultancy"
+  description="Devbites Inc. is a Toronto consultancy for project management, UI/UX design, front-end development and marketing, led by Rajeev Kugan with 15+ years of experience."
+>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="nav-shell">
+    <nav class="nav" id="nav" aria-label="Main">
+      <a class="logo" href="#top" aria-label="Devbites home">
+        <svg viewBox="0 0 100 127" aria-hidden="true"><polygon points="64,0.5 95.7,31.8 32.6,95 0.9,63.3" fill="#7996A5"/><polygon points="64,63.3 95.7,95 64,126.7 32.6,95" fill="#103742"/></svg>
+        <span><span class="dev">dev</span><span class="bites">bites</span></span>
+      </a>
+      <button class="menu-btn" id="menu" aria-label="Menu" aria-expanded="false" aria-controls="links">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg>
+      </button>
+      <ul id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="circle-btn" href={mail} aria-label="Email Devbites">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <header class="hero" id="top">
+      <svg class="hero-art" viewBox="0 0 100 127" aria-hidden="true">
+        <polygon class="a" points="64,0.5 95.7,31.8 32.6,95 0.9,63.3" fill="#7996A5"/>
+        <polygon class="b" points="64,63.3 95.7,95 64,126.7 32.6,95" fill="#103742"/>
+      </svg>
+      <div class="wrap">
+        <p class="eyebrow">Consulting &amp; contracting · Toronto</p>
+        <h1>Design that <em>ships.</em> Delivery you can count&nbsp;on.</h1>
+        <p class="lede">Devbites Inc. brings project management, UI/UX design, development and marketing to larger teams, led hands-on by Rajeev Kugan.</p>
+        <div class="cta">
+          <a class="btn" href="#work">See selected work</a>
+          <a class="btn ghost" href="#contact">Start a conversation</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <div class="stats reveal">
+        <div class="stat"><b>{years}</b><span>years designing and delivering digital products</span></div>
+        <div class="stat"><b>4</b><span>disciplines under one roof: PM, design, dev, marketing</span></div>
+        <div class="stat"><b>20k+</b><span>customers on a platform I founded and designed</span></div>
+      </div>
+    </div>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">How I help</p><h2>One partner,<br />four ways to help.</h2></div>
+          <p>Engage Devbites for a single discipline or the whole product lifecycle, embedded with your team or as a focused delivery unit.</p>
+        </div>
+      </div>
+      <div class="rail-wrap"><div class="rail">
+        {services.map((s, i) => (
+          <article class="card reveal">
+            <span class="num">0{i + 1}</span>
+            <h3>{s.title}</h3>
+            <p>{s.blurb}</p>
+            <ul>{s.points.map((p) => <li>{p}</li>)}</ul>
+          </article>
+        ))}
+      </div></div>
+    </section>
+
+    <section class="clients" aria-label="Clients">
+      <div class="wrap">
+        <p class="label">Trusted by teams at</p>
+        <ul>
+          {clients.map((c) => (
+            <li>{c.logo ? <img src={c.logo} alt={c.name} height="34" /> : c.name}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Selected work</p><h2>Products I’ve<br />helped bring to life.</h2></div>
+          <p>A few projects from across insurance, finance and entertainment.</p>
+        </div>
+        {work.map((w) => (
+          <article class="case reveal" id={w.slug}>
+            <div class="shot">
+              <div class="main"><img src={`/work/${w.hero}.webp`} alt={w.alt} loading="lazy" decoding="async" /></div>
+              <div class="thumbs" style={`--n:${w.images.filter((i) => i !== w.hero).length}`}>
+                {w.images.filter((i) => i !== w.hero).map((i) => (
+                  <img src={`/work/${i}.webp`} alt="" loading="lazy" decoding="async" />
+                ))}
+              </div>
+            </div>
+            <div>
+              <span class="tag">{w.tag}</span>
+              <h3>{w.title}</h3>
+              <p>{w.summary}</p>
+              <p class="role">{w.role}</p>
+              <ul>{w.bullets.map((b) => <li>{b}</li>)}</ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section process" aria-labelledby="proc">
+      <div class="wrap">
+        <p class="eyebrow">How I work</p>
+        <h2 id="proc">The 3-T formula.</h2>
+        <div class="steps">
+          {process.map((s) => (
+            <div class="step reveal"><b>{s.n}</b><h3>{s.title}</h3><p>{s.text}</p></div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div class="badge reveal" aria-hidden="true">
+          <svg viewBox="0 0 100 127"><polygon points="64,0.5 95.7,31.8 32.6,95 0.9,63.3" fill="#7996A5"/><polygon points="64,63.3 95.7,95 64,126.7 32.6,95" fill="#103742"/></svg>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">About</p>
+          <h2>Rajeev Kugan</h2>
+          <p style="margin-top:24px">A creative leader specializing in SaaS-based, end-consumer product delivery. For {years} years I’ve challenged the status quo while keeping stakeholders’ wants and needs at the centre, working across Canada’s largest banks, insurers and brands.</p>
+          <p>I’m a creator at heart who adopted design, development, marketing, photography and cinematography as ways to bring a vision to life. Devbites Inc. is the incorporated home for that work: freelance and contract engagements, plus consulting for larger organizations.</p>
+          <div class="facts">
+            <span>Finance</span><span>Insurance</span><span>Entertainment</span><span>Sketch · Figma · Adobe</span><span>HTML · CSS · React</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" style="padding-top:0">
+      <div class="cta-block reveal">
+        <p class="eyebrow" style="justify-content:center">Contact</p>
+        <h2>Have a project in mind?</h2>
+        <p>Tell me about the product, the team and the timeline. I’ll reply with how Devbites can help.</p>
+        <a class="btn" href={mail}>Email {site.email}
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© {new Date().getFullYear()} {site.name} · All rights reserved.</span>
+      <span>Client names and marks belong to their respective owners.</span>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav')!;
+    const btn = document.getElementById('menu')!;
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
+    onScroll(); addEventListener('scroll', onScroll, { passive: true });
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('ul a').forEach((a) => a.addEventListener('click', () => { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }));
+    const els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+      els.forEach((el) => io.observe(el));
+    } else els.forEach((el) => el.classList.add('in'));
+  </script>
+</Base>
