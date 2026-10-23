@@ -63,6 +63,7 @@ export const work = [
   },
   {
     slug: 'playmi',
+    url: 'https://playmi.ca',
     tag: 'Entertainment · Music streaming',
     title: 'Playmi: a music streaming platform',
     summary:
@@ -79,6 +80,7 @@ export const work = [
   },
   {
     slug: 'ticketmi',
+    url: 'https://ticketmi.ca',
     tag: 'Events · Ticketing',
     title: 'Ticketmi: event discovery & ticketing',
     summary:

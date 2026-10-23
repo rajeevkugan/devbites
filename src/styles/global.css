@@ -226,3 +226,14 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
   footer .wrap { flex-direction: column; }
 }
 @media (max-width: 860px) { .about .badge { max-width: 120px; border-radius: 22px; } .hero { padding-bottom: 150px; } .hero-art { bottom: 64px; } }
+
+.xp { margin-top: clamp(40px, 8vw, 120px); }
+.visit { display: inline-flex; align-items: center; gap: 8px; margin-top: 26px; padding: 12px 20px; border-radius: 999px; background: var(--teal); color: #fff; font-weight: 600; font-size: .95rem; text-decoration: none; transition: background .2s, transform .2s; }
+.visit:hover { background: var(--blue-deep); transform: translateY(-2px); }
+@media (max-width: 860px) {
+  .hero { padding: 104px 0 56px; }
+  .hero-art { position: relative; right: auto; bottom: auto; display: block; width: 112px; margin: 0 0 26px var(--gutter); opacity: 1; filter: drop-shadow(0 14px 18px rgb(16 55 66 / .18)); }
+  .stats { margin-top: 24px; }
+  .xp { margin-top: 48px; }
+  #services { padding-top: 56px; }
+}
