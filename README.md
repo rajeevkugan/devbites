@@ -9,6 +9,6 @@ npm run build    # static output in dist/ (host on Netlify, Cloudflare Pages, Gi
 ```
 
 ## Before launch
-- Confirm the contact address (`site.email`, currently the placeholder `info@devbites.ca`) and the domain in `astro.config.mjs`.
+- Confirm the contact address (`site.email`, `rajeev@devbites.com`) and the domain in `astro.config.mjs`.
 - Client logos: drop approved files in `public/clients/<name>.svg` and set `logo` on the entry in `src/data/site.ts`. Until then the strip shows text names.
 - Case-study images are from the 2018 portfolio (`public/work/`). BMO Life mocks show BMO branding; confirm you may show them.

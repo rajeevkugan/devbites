@@ -1,8 +1,8 @@
 // All editable copy lives here. No secrets: contact is a plain mailto link.
 export const site = {
   name: 'Devbites Inc.',
-  // PLACEHOLDER - confirm the real address/domain before launch.
-  email: 'info@devbites.ca',
+  // Contact address (plain mailto link).
+  email: 'rajeev@devbites.com',
   years: '15+', // per Rajeev; the freelance practice began Dec 2005
   tagline: 'Product, design & delivery for teams that ship.',
 };
@@ -62,20 +62,36 @@ export const work = [
     alt: 'ClientDesk insurance platform shown across phone, tablet and laptop',
   },
   {
-    slug: 'streaming',
-    tag: 'Entertainment · Streaming',
-    title: 'A streaming platform, end to end',
+    slug: 'playmi',
+    tag: 'Entertainment · Music streaming',
+    title: 'Playmi: a music streaming platform',
     summary:
-      'Product design, project management and marketing for a music streaming experience across iOS, Android and web.',
-    role: 'Product design & delivery',
+      'Product design, project management and marketing for a streaming service across web, iOS and Android, built around independent artists and DJs.',
+    role: 'Founder-led product design & delivery',
     bullets: [
-      'Wireframes and UI/UX design in Figma for every screen and flow.',
-      'One design language across mobile apps and the web player.',
-      'Hands-on project management through to launch.',
+      'One design language across the web player and the iOS/Android apps, designed in Figma.',
+      'Home feed with featured track, new releases, trending charts and a live "all-time heaters" rail.',
+      'Album, artist and player screens for mobile, with credits that link through to artist pages.',
     ],
-    images: ['playmi-web', 'playmi-phones', 'playmi-flows'],
-    hero: 'playmi-web',
-    alt: 'Music streaming web player designed in Figma',
+    images: ['playmi-home', 'playmi-mobile', 'playmi-album', 'playmi-flows'],
+    hero: 'playmi-home',
+    alt: 'Playmi web player home screen with featured track, new releases and charts',
+  },
+  {
+    slug: 'ticketmi',
+    tag: 'Events · Ticketing',
+    title: 'Ticketmi: event discovery & ticketing',
+    summary:
+      'A dark-first events marketplace where people discover, RSVP and buy tickets, and organizers create events.',
+    role: 'Product design & front-end',
+    bullets: [
+      'Event cards with category, date, venue, price and clear status badges such as Closed.',
+      'Fast search across events, artists and venues, plus a Find My Tickets lookup.',
+      'Free RSVP and paid ticket flows, organizer event creation, and a light/dark toggle.',
+    ],
+    images: ['ticketmi-web'],
+    hero: 'ticketmi-web',
+    alt: 'Ticketmi events marketplace showing past event cards',
   },
   {
     slug: 'bmo-life',

@@ -97,11 +97,11 @@ const mail = `mailto:${site.email}?subject=${encodeURIComponent('Project enquiry
           <article class="case reveal" id={w.slug}>
             <div class="shot">
               <div class="main"><img src={`/work/${w.hero}.webp`} alt={w.alt} loading="lazy" decoding="async" /></div>
-              <div class="thumbs" style={`--n:${w.images.filter((i) => i !== w.hero).length}`}>
+              {w.images.length > 1 && <div class="thumbs" style={`--n:${w.images.filter((i) => i !== w.hero).length}`}>
                 {w.images.filter((i) => i !== w.hero).map((i) => (
                   <img src={`/work/${i}.webp`} alt="" loading="lazy" decoding="async" />
                 ))}
-              </div>
+              </div>}
             </div>
             <div>
               <span class="tag">{w.tag}</span>
