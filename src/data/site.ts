@@ -41,9 +41,26 @@ export const clients: { name: string; logo?: string }[] = [
   { name: 'National Bank' },
   { name: 'Scotiabank' },
   { name: "McDonald's" },
+  { name: 'Scream 4 (film)' },
 ];
 
 export const work = [
+  {
+    slug: 'scream4',
+    tag: 'Film · Interactive campaign',
+    title: 'Scream 4: the movie site (scream4.ca)',
+    summary:
+      'A large-scale promotional site for the Scream 4 release, built at a time when full-screen video backgrounds in HTML5 were still new.',
+    role: 'Designer & front-end developer',
+    bullets: [
+      'One of the early interactive HTML5 sites to use full-screen video backgrounds.',
+      'Full-screen cinematic video as the backdrop, with a characters section and a pause/play control.',
+      'A “Make a Scream face” fan interactive with sharing via Twitter and Facebook.',
+    ],
+    images: ['scream4'],
+    hero: 'scream4',
+    alt: 'Scream 4 official site with full-screen video background',
+  },
   {
     slug: 'clientdesk',
     tag: 'Insurtech · Founder-led',
