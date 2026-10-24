@@ -4,7 +4,7 @@ export const site = {
   // Contact address (plain mailto link).
   email: 'rajeev@devbites.com',
   years: '15+', // per Rajeev; the freelance practice began Dec 2005
-  tagline: 'AI-driven product design & delivery for teams that ship.',
+  tagline: 'Senior product design & delivery for teams that ship.',
 };
 
 export const services = [
