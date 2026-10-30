@@ -3,7 +3,7 @@ export const site = {
   name: 'Devbites Inc.',
   // Contact address (plain mailto link).
   email: 'rajeev@devbites.com',
-  years: '15+', // per Rajeev; the freelance practice began Dec 2005
+  years: '20+', // per Rajeev; the freelance practice began Dec 2005
   tagline: 'Senior product design & delivery for teams that ship.',
 };
 
@@ -137,7 +137,7 @@ export const process = [
 ];
 
 export const experience = [
-  { n: '01', title: 'We see the whole picture', text: 'Strategy, design, build, QA, launch and support. After 15+ years across every stage, I know how each decision upstream shows up downstream.' },
+  { n: '01', title: 'We see the whole picture', text: 'Strategy, design, build, QA, launch and support. After 20+ years across every stage, I know how each decision upstream shows up downstream.' },
   { n: '02', title: 'We know what to ask AI for', text: 'AI is only as good as the person directing it. Experience is knowing the right problem, the right constraints and when the output is wrong.' },
   { n: '03', title: 'We have shipped under real constraints', text: 'Banks, insurers and startups: compliance, accessibility, stakeholders, budgets and deadlines. The unglamorous parts that make products actually launch.' },
   { n: '04', title: 'One accountable lead', text: 'No hand-offs between five vendors. One senior partner owns the outcome from first workshop to live product.' },
