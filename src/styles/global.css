@@ -268,3 +268,5 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-stopped { overflow: hidden; }
+
+.stat b { font-variant-numeric: tabular-nums; }
