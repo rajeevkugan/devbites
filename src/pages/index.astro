@@ -182,6 +182,7 @@ const mail = `mailto:${site.email}?subject=${encodeURIComponent('Project enquiry
   </footer>
 
   <script>
+    import Lenis from 'lenis';
     const nav = document.getElementById('nav')!;
     const btn = document.getElementById('menu')!;
     const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
@@ -191,13 +192,18 @@ const mail = `mailto:${site.email}?subject=${encodeURIComponent('Project enquiry
       btn.setAttribute('aria-expanded', String(open));
     });
     nav.querySelectorAll('ul a').forEach((a) => a.addEventListener('click', () => { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }));
-    // Smooth-scroll only for in-page link clicks (CSS smooth-scroll on <html> makes wheel scrolling jittery).
+    // Lenis smooths mouse-wheel scrolling (wheels step in chunks; trackpads are already smooth).
     const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let lenis: Lenis | null = null;
+    if (!calm) {
+      lenis = new Lenis({ lerp: 0.12, smoothWheel: true, autoRaf: true });
+    }
     document.querySelectorAll('a[href^="#"]').forEach((a) => a.addEventListener('click', (e) => {
-      const t = document.querySelector(a.getAttribute('href')!);
+      const t = document.querySelector(a.getAttribute('href')!) as HTMLElement | null;
       if (!t) return;
       e.preventDefault();
-      t.scrollIntoView({ behavior: calm ? 'auto' : 'smooth', block: 'start' });
+      if (lenis) lenis.scrollTo(t, { offset: -96 });
+      else t.scrollIntoView({ block: 'start' });
       history.pushState(null, '', a.getAttribute('href'));
     }));
     const els = document.querySelectorAll('.reveal');

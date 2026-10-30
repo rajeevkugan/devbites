@@ -263,3 +263,8 @@ footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; g
 .reveal { will-change: opacity, transform; }
 .reveal.in { will-change: auto; }
 @media (max-width: 860px) { .stats { margin-top: 28px; } .xp { margin-top: 28px; } }
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
